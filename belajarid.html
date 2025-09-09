@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satria Anggara Pratama - Portofolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/floral-pattern.png') repeat, linear-gradient(135deg, #f7e7f2, #e8f0fa);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #4a3c5e;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #4a3c5e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-content {
+            text-align: center;
+        }
+
+        .skills-content {
+            text-align: center;
+        }
+
+        .skills-content p {
+            font-size: 1.1rem;
+            color: #4a3c5e;
+            margin-bottom: 20px;
+        }
+
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-item {
+            background: #f1c1d3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-description {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: #4a3c5e;
+            text-align: center;
+            max-width: 300px;
+            z-index: 1000;
+        }
+
+        .skill-description.active {
+            display: block;
+        }
+
+        .skill-description button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #f1c1d3;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .skill-description button:hover {
+            background: #d8a7b1;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(241, 193, 211, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item .overlay p {
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Satria Anggara Pratama</h1>
+        <p>Menciptakan dengan Semangat dan Keanggunan</p>
+    </header>
+
+    <div class="container">
+        <div class="section about">
+            <h2>Tentang Saya</h2>
+            <div class="about-content">
+                <p>Halo! Saya Satria Anggara Pratama, seorang mahasiswa Rekayasa Perangkat Lunak (RPL) yang bersemangat dalam coding. Saya memilih RPL karena saya tertarik dengan pemrograman dan kemampuan untuk menciptakan game, website, dan lainnya melalui kode. Terinspirasi oleh keanggunan alam, terutama bunga, saya berusaha membawa kreativitas dan fungsionalitas ke setiap proyek yang saya kerjakan.</p>
+            </div>
+        </div>
+
+        <div class="section skills">
+            <h2>Keahlian Saya</h2>
+            <div class="skills-content">
+                <p>Kreativitas saya bersinar melalui coding, di mana saya diajarkan untuk menciptakan solusi inovatif menggunakan HTML, Java, dan lainnya.</p>
+                <div class="skills-list" id="skillsList">
+                    <div class="skill-item" onclick="showDescription('html')">HTML</div>
+                    <div class="skill-item" onclick="showDescription('java')">Java</div>
+                    <div class="skill-item" onclick="showDescription('web')">Pengembangan Web</div>
+                    <div class="skill-item" onclick="showDescription('game')">Pengembangan Game</div>
+                    <div class="skill-item" onclick="showDescription('cyber')">Keamanan Siber</div>
+                </div>
+            </div>
+            <div id="skillDescription" class="skill-description">
+                <p id="descriptionText"></p>
+                <button onclick="hideDescription()">Tutup</button>
+            </div>
+        </div>
+
+        <div class="section portfolio">
+            <h2>Proyek Saya</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200?text=Proyek+Game" alt="Proyek Game dan Koding">
+                    <div class="overlay"><p>Membuat Game dan Koding</p></div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200?text=Proyek+Web" alt="Proyek Pengembangan Web">
+                    <div class="overlay"><p>Pengembangan Web</p></div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200?text=Keamanan+Siber" alt="Proyek Keamanan Siber">
+                    <div class="overlay"><p>Keamanan Siber</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Satria Anggara Pratama. Seluruh hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        function showDescription(skill) {
+            const descriptions = {
+                'html': 'HTML adalah bahasa markup yang saya gunakan untuk membuat struktur website yang menarik dan responsif.',
+                'java': 'Java adalah bahasa pemrograman yang saya pelajari untuk mengembangkan aplikasi dan logika kompleks.',
+                'web': 'Pengembangan Web memungkinkan saya merancang situs interaktif dengan teknologi seperti HTML, CSS, dan JavaScript.',
+                'game': 'Pengembangan Game adalah keahlian saya untuk menciptakan permainan sederhana menggunakan kode.',
+                'cyber': 'Keamanan Siber melibatkan kemampuan saya untuk melindungi sistem dari ancaman digital.'
+            };
+            document.getElementById('descriptionText').textContent = descriptions[skill];
+            document.getElementById('skillDescription').classList.add('active');
+        }
+
+        function hideDescription() {
+            document.getElementById('skillDescription').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
